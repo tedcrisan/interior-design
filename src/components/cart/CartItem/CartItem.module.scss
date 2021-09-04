@@ -1,0 +1,68 @@
+@import "../../../../styles/colors";
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 6fr 1fr;
+  gap: 1rem;
+  font-family: "Crimson Text", serif;
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $black;
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  span {
+    font-size: 22px;
+  }
+}
+
+.itemName {
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.vendorName {
+  font-size: 16px;
+}
+
+.remove {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 80px 1rem 1rem 1rem;
+  }
+
+  .details {
+    span {
+      font-size: 16px;
+    }
+  }
+
+  .itemName {
+    font-size: 18px;
+  }
+
+  .vendorName {
+    font-size: 12px;
+  }
+}

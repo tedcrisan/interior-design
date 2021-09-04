@@ -1,0 +1,138 @@
+@import "../../../../styles/colors";
+
+.container {
+  position: relative;
+  width: 100%;
+  border-radius: 40px;
+  background: $white;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  &:hover {
+    .content {
+      opacity: 1;
+    }
+  }
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  color: $white;
+  background: $blackTransparent;
+  opacity: 0;
+}
+
+.topText {
+  p {
+    margin: 0;
+  }
+}
+
+.itemName {
+  font-size: 36px;
+  text-transform: capitalize;
+}
+
+.vendorName {
+  font-size: 20px;
+}
+
+.bottomText {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    font-size: 36px;
+    margin: 0;
+  }
+
+  button {
+    font-family: "Crimson Text", serif;
+    font-size: 24px;
+    background: transparent;
+    color: $white;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1200px) {
+  .itemName {
+    font-size: 30px;
+  }
+
+  .vendorName {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bottomText {
+    p {
+      font-size: 24px;
+    }
+
+    button {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .itemName {
+    font-size: 20px;
+  }
+
+  .vendorName {
+    font-size: 12px;
+  }
+
+  .bottomText {
+    p {
+      font-size: 18px;
+    }
+
+    button {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    border-radius: 20px;
+  }
+
+  .content {
+    padding: 0.5rem;
+  }
+
+  .itemName {
+    font-size: 12px;
+  }
+
+  .vendorName {
+    font-size: 9px;
+  }
+
+  .bottomText {
+    p {
+      font-size: 16px;
+    }
+
+    button {
+      font-size: 12px;
+    }
+  }
+}
